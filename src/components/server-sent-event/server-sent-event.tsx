@@ -6,7 +6,6 @@ import { getBaseURL } from "../../utils/utils";
 const baseURL = getBaseURL();
 
 export const ServerSentEvent: React.FC = () => {
-    console.log('rendering here');
   const { refetch: refetchScheduleMaintenance } = useGetScheduleMaintenance();
   const [receivedData, setReceivedData] = useState<any>();
   const [listening, setListening] = useState(false);
