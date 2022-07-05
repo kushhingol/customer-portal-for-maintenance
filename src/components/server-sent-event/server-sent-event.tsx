@@ -17,15 +17,12 @@ export const ServerSentEvent: React.FC = () => {
       const events = new EventSource(
         `${baseURL}/api/maintenance/maintenance-events`
       );
-      console.log(events);
 
       events.onopen = (event) => {
         console.log("this is evemt", event);
       };
 
       events.onmessage = (event) => {
-        alert("event");
-        console.log("this is event", event);
         const parsedData = JSON.parse(event.data);
 
         setReceivedData(() => parsedData);
