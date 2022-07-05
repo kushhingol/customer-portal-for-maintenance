@@ -18,10 +18,6 @@ export const ServerSentEvent: React.FC = () => {
         `${baseURL}/api/maintenance/maintenance-events`
       );
 
-      events.onopen = (event) => {
-        console.log("this is evemt", event);
-      };
-
       events.onmessage = (event) => {
         const parsedData = JSON.parse(event.data);
 
