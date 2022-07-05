@@ -1,0 +1,19 @@
+.banner-container {
+    padding: 12px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFBD7;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.banner-container > p {
+    margin: 0;
+}
+
+.banner-button {
+    background: black;
+    border: none;
+    color: white;
+    border-radius: 50%;
+}
