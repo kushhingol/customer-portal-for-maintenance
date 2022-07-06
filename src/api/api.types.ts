@@ -1,9 +1,9 @@
 export type MaintenanceScheduleType = {
     name: string;
-    startDate: string;
-    startTime: string;
-    endDate: string;
-    endTime: string;
+    start_date: string;
+    start_time: string;
+    end_date: string;
+    end_time: string;
 }
 
 export type GetMainteanceScheduleResponse = {

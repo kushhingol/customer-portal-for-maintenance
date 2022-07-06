@@ -30,7 +30,7 @@ export const ServerSentEvent: React.FC = () => {
   }, [listening, refetchScheduleMaintenance]);
 
   const title = showBanner
-    ? `Maintenance is scheduled from ${receivedData.startDate} - ${receivedData.startTime} to ${receivedData.endDate} - ${receivedData.endTime}`
+    ? `Maintenance is scheduled from ${receivedData.start_date} - ${receivedData.start_time} to ${receivedData.end_date} - ${receivedData.end_time}`
     : "";
 
   return <>{showBanner && <Banner title={title} onClose={() => setShowBanner(false)} />}</>;

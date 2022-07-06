@@ -1,8 +1,15 @@
 import React from "react";
 import { useGetScheduleMaintenance } from "../../hooks/useGetScheduleMaintenance";
 import { Button } from "../../shared/button/button";
+import { LoadingSpinner } from "../../shared/loading-spinner/loading-spinner";
 import { Table } from "../../shared/table/table";
 import { getTitleCase } from "../../utils/utils";
+
+const NoMaintenanceData: React.FC = () => (
+  <div style={{ margin: "8px 0px" }}>
+    <b>No Maintenance Data found</b>
+  </div>
+);
 
 export const ScheduleMaintenance: React.FC = () => {
   const {
@@ -36,9 +43,15 @@ export const ScheduleMaintenance: React.FC = () => {
           isLoading={isLoading || isRefetching}
         />
       ) : (
-        <div style={{margin: '8px 0px'}}>
-          <b>No Maintenance Data found</b>
-        </div>
+        <>
+          {isLoading ? (
+            <div>
+              <LoadingSpinner />
+            </div>
+          ) : (
+            <NoMaintenanceData />
+          )}
+        </>
       )}
     </>
   );
